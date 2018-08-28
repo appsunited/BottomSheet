@@ -10,14 +10,14 @@ import UIKit
 
 class BottomSheetViewController: UITableViewController, BottomSheet {
 
-    var bottomSheetHeight: CGFloat = 200  // TODO: Make this editable
+    var bottomSheetHeight: CGFloat = 200    // TODO: Make this editable
+    var reuseIdentifier = "bottomSheetCell" // TODO: Extract this to MySheetViewController.
     var bottomSheetDelegate: BottomSheetDelegate?
-    var reuseIdentifier = "cell"  // TODO: Extract this to MySheetViewController.
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        
+        tableView.register(UINib(nibName: "BottomSheetCell", bundle: Bundle.main), forCellReuseIdentifier: reuseIdentifier)
         tableView.contentInset.top = (UIScreen.main.bounds.height - 20) - bottomSheetHeight
         tableView.backgroundColor = .clear
         tableView.showsVerticalScrollIndicator = false
