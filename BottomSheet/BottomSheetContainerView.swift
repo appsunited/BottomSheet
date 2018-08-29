@@ -46,7 +46,7 @@ class BottomSheetContainerView: UIView {
         // The sheet background
         addSubview(sheetBackground)
         sheetBackground.translatesAutoresizingMaskIntoConstraints = false
-        let topConstraint = sheetBackground.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor)
+        let topConstraint = sheetBackground.topAnchor.constraint(equalTo: topAnchor)
         NSLayoutConstraint.activate([
             topConstraint,
             sheetBackground.heightAnchor.constraint(equalTo: heightAnchor),
@@ -61,7 +61,7 @@ class BottomSheetContainerView: UIView {
         NSLayoutConstraint.activate([
             sheetView.leftAnchor.constraint(equalTo: leftAnchor),
             sheetView.rightAnchor.constraint(equalTo: rightAnchor),
-            sheetView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            sheetView.topAnchor.constraint(equalTo: topAnchor),
             sheetView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }

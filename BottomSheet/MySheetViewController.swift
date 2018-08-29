@@ -8,10 +8,9 @@
 
 import UIKit
 
-private let numberOfCountries = 30
-private let countries = Locale.isoRegionCodes.prefix(numberOfCountries).map(Locale.current.localizedString(forRegionCode:))
-
 class MySheetViewController: BottomSheetViewController {
+    
+    private let countries = Locale.isoRegionCodes.prefix(30).map(Locale.current.localizedString(forRegionCode:))
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countries.count
