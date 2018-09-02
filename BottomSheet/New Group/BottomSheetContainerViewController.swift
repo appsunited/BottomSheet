@@ -18,26 +18,9 @@ protocol BottomSheet: AnyObject {
 
 class BottomSheetContainerViewController: UIViewController, BottomSheetDelegate {
     
-    private let mainViewController: UIViewController
-    private let sheetViewController: BottomSheetViewController
-    private lazy var bottomSheetContainerView = BottomSheetContainerView(mainView: mainViewController.view,
-                                                                         sheetView: sheetViewController.view)
-    
-    init(mainViewController: UIViewController, sheetViewController: BottomSheetViewController) {
-        self.mainViewController = mainViewController
-        self.sheetViewController = sheetViewController
-        
-        super.init(nibName: nil, bundle: nil)
-        
-        addChildViewController(mainViewController)
-        addChildViewController(sheetViewController)
-        
-        sheetViewController.bottomSheetDelegate = self
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError()
-    }
+    var mainViewController: UIViewController!
+    var sheetViewController: BottomSheetViewController!
+    private lazy var bottomSheetContainerView = BottomSheetContainerView(mainView: mainViewController.view, sheetView: sheetViewController.view)
     
     override func loadView() {
         view = bottomSheetContainerView
@@ -45,6 +28,11 @@ class BottomSheetContainerViewController: UIViewController, BottomSheetDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addChildViewController(mainViewController)
+        addChildViewController(sheetViewController)
+        
+        sheetViewController.bottomSheetDelegate = self
         
         mainViewController.didMove(toParentViewController: self)
         sheetViewController.didMove(toParentViewController: self)
