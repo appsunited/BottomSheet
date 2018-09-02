@@ -8,9 +8,12 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: BottomSheetContainerViewController {
     
-    override func viewDidLoad() {
-        view.backgroundColor = .lightGray
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        mainViewController = SecondViewController()
+        sheetViewController = MySheetViewController()
     }
 }
