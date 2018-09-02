@@ -2,18 +2,15 @@
 //  MainViewController.swift
 //  BottomSheet
 //
-//  Created by Felix Weiss on 27.08.18.
+//  Created by Felix Weiss on 02.09.18.
 //  Copyright © 2018 appsunited. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: BottomSheetContainerViewController {
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        mainViewController = SecondViewController()
-        sheetViewController = MySheetViewController()
+class MainViewController: UIViewController {
+
+    override func viewDidLoad() {
+        view.backgroundColor = .lightGray
     }
 }

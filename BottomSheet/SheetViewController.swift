@@ -1,5 +1,5 @@
 //
-//  MySheetViewController.swift
+//  SheetViewController.swift
 //  BottomSheet
 //
 //  Created by Felix Weiss on 27.08.18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MySheetViewController: BottomSheetViewController {
+class SheetViewController: BottomSheetViewController {
     
     private let countries = Locale.isoRegionCodes.prefix(30).map(Locale.current.localizedString(forRegionCode:))
 
