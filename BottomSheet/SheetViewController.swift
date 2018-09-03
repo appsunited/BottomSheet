@@ -17,7 +17,7 @@ class SheetViewController: BottomSheetViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: super.reuseIdentifier) as! BottomSheetCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: super.cellId) as! BottomSheetCell
         cell.titleLable.text = countries[indexPath.row]
         return cell
     }

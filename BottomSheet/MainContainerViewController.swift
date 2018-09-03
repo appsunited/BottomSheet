@@ -8,15 +8,12 @@
 
 import UIKit
 
-class MainContainerViewController: BottomSheetContainerViewController, BottomSheetConfig {
-    
-    let bottomSheetHeight: CGFloat = 100
+class MainContainerViewController: BottomSheetContainerViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         mainViewController = MainViewController()
-        sheetViewController = SheetViewController()
-        sheetViewController.configDelegate = self
+        sheetViewController = SheetViewController(height: 100, isSnapping: false)
     }
 }
