@@ -12,11 +12,11 @@
 		DC67071B213449B800CD2ECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC670719213449B800CD2ECE /* Main.storyboard */; };
 		DC67071D213449B900CD2ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC67071C213449B900CD2ECE /* Assets.xcassets */; };
 		DC670720213449B900CD2ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC67071E213449B900CD2ECE /* LaunchScreen.storyboard */; };
-		DC670728213449DF00CD2ECE /* BottomSheetContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC670727213449DF00CD2ECE /* BottomSheetContainerViewController.swift */; };
+		DC670728213449DF00CD2ECE /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC670727213449DF00CD2ECE /* BottomSheetViewController.swift */; };
 		DC67072A21344F1400CD2ECE /* BottomSheetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67072921344F1400CD2ECE /* BottomSheetBackgroundView.swift */; };
-		DC67072C2134507F00CD2ECE /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67072B2134507F00CD2ECE /* BottomSheetViewController.swift */; };
+		DC67072C2134507F00CD2ECE /* BottomSheetContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67072B2134507F00CD2ECE /* BottomSheetContentViewController.swift */; };
 		DC67072E21346C9600CD2ECE /* BottomSheetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67072D21346C9600CD2ECE /* BottomSheetContainerView.swift */; };
-		DC6707312134889E00CD2ECE /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6707302134889E00CD2ECE /* SheetViewController.swift */; };
+		DC6707312134889E00CD2ECE /* SheetContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6707302134889E00CD2ECE /* SheetContentViewController.swift */; };
 		DC6707592135A2E800CD2ECE /* BottomSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC6707582135A2E800CD2ECE /* BottomSheetCell.xib */; };
 		DC67075D2135A92E00CD2ECE /* BottomSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC67075C2135A92E00CD2ECE /* BottomSheetCell.swift */; };
 		DCF52AAE213C11CC00E08122 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF52AAD213C11CC00E08122 /* MainViewController.swift */; };
@@ -30,11 +30,11 @@
 		DC67071C213449B900CD2ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC67071F213449B900CD2ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC670721213449B900CD2ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC670727213449DF00CD2ECE /* BottomSheetContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainerViewController.swift; sourceTree = "<group>"; };
+		DC670727213449DF00CD2ECE /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		DC67072921344F1400CD2ECE /* BottomSheetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetBackgroundView.swift; sourceTree = "<group>"; };
-		DC67072B2134507F00CD2ECE /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		DC67072B2134507F00CD2ECE /* BottomSheetContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContentViewController.swift; sourceTree = "<group>"; };
 		DC67072D21346C9600CD2ECE /* BottomSheetContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainerView.swift; sourceTree = "<group>"; };
-		DC6707302134889E00CD2ECE /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		DC6707302134889E00CD2ECE /* SheetContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetContentViewController.swift; sourceTree = "<group>"; };
 		DC6707582135A2E800CD2ECE /* BottomSheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetCell.xib; sourceTree = "<group>"; };
 		DC67075C2135A92E00CD2ECE /* BottomSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetCell.swift; sourceTree = "<group>"; };
 		DCF52AAD213C11CC00E08122 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				DC67072F21346D1200CD2ECE /* Interface Builder */,
 				DC670717213449B800CD2ECE /* MainContainerViewController.swift */,
 				DCF52AAD213C11CC00E08122 /* MainViewController.swift */,
-				DC6707302134889E00CD2ECE /* SheetViewController.swift */,
+				DC6707302134889E00CD2ECE /* SheetContentViewController.swift */,
 				DC67075C2135A92E00CD2ECE /* BottomSheetCell.swift */,
 			);
 			path = BottomSheet;
@@ -84,9 +84,9 @@
 		DC67072F21346D1200CD2ECE /* Interface Builder */ = {
 			isa = PBXGroup;
 			children = (
-				DC67071E213449B900CD2ECE /* LaunchScreen.storyboard */,
 				DC670719213449B800CD2ECE /* Main.storyboard */,
 				DC6707582135A2E800CD2ECE /* BottomSheetCell.xib */,
+				DC67071E213449B900CD2ECE /* LaunchScreen.storyboard */,
 			);
 			path = "Interface Builder";
 			sourceTree = "<group>";
@@ -96,8 +96,8 @@
 			children = (
 				DC67072921344F1400CD2ECE /* BottomSheetBackgroundView.swift */,
 				DC67072D21346C9600CD2ECE /* BottomSheetContainerView.swift */,
-				DC670727213449DF00CD2ECE /* BottomSheetContainerViewController.swift */,
-				DC67072B2134507F00CD2ECE /* BottomSheetViewController.swift */,
+				DC67072B2134507F00CD2ECE /* BottomSheetContentViewController.swift */,
+				DC670727213449DF00CD2ECE /* BottomSheetViewController.swift */,
 			);
 			name = Library;
 			path = "New Group";
@@ -185,13 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC6707312134889E00CD2ECE /* SheetViewController.swift in Sources */,
+				DC6707312134889E00CD2ECE /* SheetContentViewController.swift in Sources */,
 				DC67075D2135A92E00CD2ECE /* BottomSheetCell.swift in Sources */,
 				DC670718213449B800CD2ECE /* MainContainerViewController.swift in Sources */,
 				DCF52AAE213C11CC00E08122 /* MainViewController.swift in Sources */,
 				DC670716213449B800CD2ECE /* AppDelegate.swift in Sources */,
-				DC670728213449DF00CD2ECE /* BottomSheetContainerViewController.swift in Sources */,
-				DC67072C2134507F00CD2ECE /* BottomSheetViewController.swift in Sources */,
+				DC670728213449DF00CD2ECE /* BottomSheetViewController.swift in Sources */,
+				DC67072C2134507F00CD2ECE /* BottomSheetContentViewController.swift in Sources */,
 				DC67072A21344F1400CD2ECE /* BottomSheetBackgroundView.swift in Sources */,
 				DC67072E21346C9600CD2ECE /* BottomSheetContainerView.swift in Sources */,
 			);

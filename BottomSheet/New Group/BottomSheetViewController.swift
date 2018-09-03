@@ -8,57 +8,37 @@
 
 import UIKit
 
-class BottomSheetViewController: UITableViewController, BottomSheet {
+protocol BottomSheetDelegate: AnyObject {
+    func bottomSheet(_ bottomSheet: BottomSheet, didScrollTo contentOffset: CGPoint)
+}
 
-    var bottomSheetDelegate: BottomSheetDelegate?
-    var height: CGFloat!
-    var cellId: String!
-    var isSnapping: Bool!
+protocol BottomSheet: AnyObject {
+    var bottomSheetDelegate: BottomSheetDelegate? { get set }
+}
+
+class BottomSheetViewController: UIViewController, BottomSheetDelegate {
     
-    init(height: CGFloat = 200, cellId: String = "BottomSheetCell", isSnapping: Bool = true) {
-        super.init(style: UITableViewStyle.plain)
-        self.height = height
-        self.cellId = cellId
-        self.isSnapping = isSnapping
+    var mainViewController: UIViewController!
+    var bottomSheetViewController: BottomSheetContentViewController!
+    private lazy var bottomSheetContainerView = BottomSheetContainerView(mainView: mainViewController.view, sheetView: bottomSheetViewController.view)
+    
+    override func loadView() {
+        view = bottomSheetContainerView
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "BottomSheetCell", bundle: Bundle.main), forCellReuseIdentifier: cellId)
-        tableView.contentInset.top = (UIScreen.main.bounds.height - 20) - height
-        tableView.backgroundColor = .clear
-        tableView.showsVerticalScrollIndicator = false
-        tableView.decelerationRate = UIScrollViewDecelerationRateFast
+        addChildViewController(mainViewController)
+        addChildViewController(bottomSheetViewController)
+        
+        bottomSheetViewController.bottomSheetDelegate = self
+        
+        mainViewController.didMove(toParentViewController: self)
+        bottomSheetViewController.didMove(toParentViewController: self)
     }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        bottomSheetDelegate?.bottomSheet(self, didScrollTo: tableView.contentOffset)
-    }
-
-    // MARK: - Scroll view delegate
-
-    private var scrollViewContentOffsetY: CGFloat = 0
-
-    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        scrollViewContentOffsetY = scrollView.contentOffset.y
-    }
-
-    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let pulledUpOffset: CGFloat = 0
-        let pulledDownOffset: CGFloat = -((UIScreen.main.bounds.height - 20) - height)
-
-        if isSnapping && (pulledDownOffset...pulledUpOffset).contains(targetContentOffset.pointee.y) {
-            if scrollViewContentOffsetY < scrollView.contentOffset.y {
-                targetContentOffset.pointee.y = pulledUpOffset
-            } else {
-                targetContentOffset.pointee.y = pulledDownOffset
-            }
-        }
+    
+    func bottomSheet(_ bottomSheet: BottomSheet, didScrollTo contentOffset: CGPoint) {
+        bottomSheetContainerView.topDistance = max(0, -contentOffset.y)
     }
 }

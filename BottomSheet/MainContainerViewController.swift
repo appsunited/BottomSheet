@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MainContainerViewController: BottomSheetContainerViewController {
+class MainContainerViewController: BottomSheetViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         mainViewController = MainViewController()
-        sheetViewController = SheetViewController(height: 100, isSnapping: false)
+        bottomSheetViewController = SheetContentViewController(height: 150)
     }
 }
