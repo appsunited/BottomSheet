@@ -8,14 +8,23 @@
 
 import UIKit
 
+protocol BottomSheetConfig {
+    var bottomSheetHeight: CGFloat { get }
+}
+
 class BottomSheetViewController: UITableViewController, BottomSheet {
 
-    var bottomSheetHeight: CGFloat = 200    // TODO: Make this editable
+    var configDelegate: BottomSheetConfig?
+    var bottomSheetHeight: CGFloat = 200
     var reuseIdentifier = "bottomSheetCell" // TODO: Extract this to MySheetViewController.
     var bottomSheetDelegate: BottomSheetDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let sheetHeight = configDelegate?.bottomSheetHeight {
+            bottomSheetHeight = sheetHeight
+        }
         
         tableView.register(UINib(nibName: "BottomSheetCell", bundle: Bundle.main), forCellReuseIdentifier: reuseIdentifier)
         tableView.contentInset.top = (UIScreen.main.bounds.height - 20) - bottomSheetHeight
