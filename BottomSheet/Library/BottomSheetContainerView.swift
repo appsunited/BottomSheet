@@ -12,12 +12,13 @@ class BottomSheetContainerView: UIView {
     
     private let mainView: UIView
     private let sheetView: UIView
-    private let sheetBackground = BottomSheetBackgroundView()
+    private let backgroundView: UIView
     private var sheetBackgroundTopConstraint: NSLayoutConstraint? = nil
     
-    init(mainView: UIView, sheetView: UIView) {
+    init(mainView: UIView, sheetView: UIView, backgroundView: UIView) {
         self.mainView = mainView
         self.sheetView = sheetView
+        self.backgroundView = backgroundView
         
         super.init(frame: .zero)
         
@@ -44,14 +45,14 @@ class BottomSheetContainerView: UIView {
         ])
         
         // The sheet background
-        addSubview(sheetBackground)
-        sheetBackground.translatesAutoresizingMaskIntoConstraints = false
-        let topConstraint = sheetBackground.topAnchor.constraint(equalTo: topAnchor)
+        addSubview(backgroundView)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        let topConstraint = backgroundView.topAnchor.constraint(equalTo: topAnchor)
         NSLayoutConstraint.activate([
             topConstraint,
-            sheetBackground.heightAnchor.constraint(equalTo: heightAnchor),
-            sheetBackground.leftAnchor.constraint(equalTo: leftAnchor),
-            sheetBackground.rightAnchor.constraint(equalTo: rightAnchor)
+            backgroundView.heightAnchor.constraint(equalTo: heightAnchor),
+            backgroundView.leftAnchor.constraint(equalTo: leftAnchor),
+            backgroundView.rightAnchor.constraint(equalTo: rightAnchor)
         ])
         sheetBackgroundTopConstraint = topConstraint
         
@@ -69,7 +70,7 @@ class BottomSheetContainerView: UIView {
     // MARK: - UIView overrides
     
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        if sheetBackground.bounds.contains(sheetBackground.convert(point, from: self)) {
+        if backgroundView.bounds.contains(backgroundView.convert(point, from: self)) {
             return sheetView.hitTest(sheetView.convert(point, from: self), with: event)
         }
         return mainView.hitTest(mainView.convert(point, from: self), with: event)

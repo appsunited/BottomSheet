@@ -20,7 +20,7 @@ class BottomSheetViewController: UIViewController, BottomSheetDelegate {
     
     var mainViewController: UIViewController!
     var bottomSheetViewController: BottomSheetContentViewController!
-    private lazy var bottomSheetContainerView = BottomSheetContainerView(mainView: mainViewController.view, sheetView: bottomSheetViewController.view)
+    private lazy var bottomSheetContainerView = BottomSheetContainerView(mainView: mainViewController.view, sheetView: bottomSheetViewController.view, backgroundView: bottomSheetViewController.background)
     
     override func loadView() {
         view = bottomSheetContainerView

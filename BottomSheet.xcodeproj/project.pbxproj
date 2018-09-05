@@ -19,6 +19,7 @@
 		DC70EBB2213DBFA100B8A2C1 /* BottomSheetContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC70EBAE213DBFA100B8A2C1 /* BottomSheetContentViewController.swift */; };
 		DC70EBB3213DBFA100B8A2C1 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC70EBAF213DBFA100B8A2C1 /* BottomSheetViewController.swift */; };
 		DC70EBB4213DBFA100B8A2C1 /* BottomSheetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC70EBB0213DBFA100B8A2C1 /* BottomSheetContainerView.swift */; };
+		DCC886F621408135006E06BF /* SheetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC886F521408135006E06BF /* SheetBackgroundView.swift */; };
 		DCF52AAE213C11CC00E08122 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF52AAD213C11CC00E08122 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		DC70EBAE213DBFA100B8A2C1 /* BottomSheetContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetContentViewController.swift; sourceTree = "<group>"; };
 		DC70EBAF213DBFA100B8A2C1 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		DC70EBB0213DBFA100B8A2C1 /* BottomSheetContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetContainerView.swift; sourceTree = "<group>"; };
+		DCC886F521408135006E06BF /* SheetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBackgroundView.swift; sourceTree = "<group>"; };
 		DCF52AAD213C11CC00E08122 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				DC670717213449B800CD2ECE /* MainContainerViewController.swift */,
 				DCF52AAD213C11CC00E08122 /* MainViewController.swift */,
 				DC6707302134889E00CD2ECE /* SheetContentViewController.swift */,
+				DCC886F521408135006E06BF /* SheetBackgroundView.swift */,
 				DC67075C2135A92E00CD2ECE /* BottomSheetCell.swift */,
 			);
 			path = BottomSheet;
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC886F621408135006E06BF /* SheetBackgroundView.swift in Sources */,
 				DC6707312134889E00CD2ECE /* SheetContentViewController.swift in Sources */,
 				DC70EBB2213DBFA100B8A2C1 /* BottomSheetContentViewController.swift in Sources */,
 				DC70EBB1213DBFA100B8A2C1 /* BottomSheetBackgroundView.swift in Sources */,

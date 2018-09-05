@@ -14,6 +14,6 @@ class MainContainerViewController: BottomSheetViewController {
         super.init(coder: aDecoder)
         
         mainViewController = MainViewController()
-        bottomSheetViewController = SheetContentViewController(height: 150)
+        bottomSheetViewController = SheetContentViewController(height: 150, background: SheetBackgroundView())
     }
 }

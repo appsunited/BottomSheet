@@ -13,12 +13,14 @@ class BottomSheetContentViewController: UITableViewController, BottomSheet {
     var bottomSheetDelegate: BottomSheetDelegate?
     var height: CGFloat!
     var cellId: String!
+    var background: UIView!
     var isSnapping: Bool!
     
-    init(height: CGFloat = 200, cellId: String = "BottomSheetCell", isSnapping: Bool = true) {
+    init(height: CGFloat = 200, cellId: String = "BottomSheetCell", background: UIView = BottomSheetBackgroundView(), isSnapping: Bool = true) {
         super.init(style: UITableViewStyle.plain)
         self.height = height
         self.cellId = cellId
+        self.background = background
         self.isSnapping = isSnapping
     }
     
