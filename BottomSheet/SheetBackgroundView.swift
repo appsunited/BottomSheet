@@ -13,7 +13,7 @@ class SheetBackgroundView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .yellow
+        backgroundColor = .darkGray
         layer.cornerRadius = 10
     }
     
