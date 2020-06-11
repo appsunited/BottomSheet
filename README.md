@@ -4,3 +4,6 @@ The Bottom Drawer or Bottom Sheet is a user interface pattern that is used more 
 
 ### Implementation
 A view controller composition is used to avoid ending up with everything in one big view controller. So a BottomSheetContainerViewController is built that on construction takes two UIViewControllers, one that acts as the main, background UI, and one that acts as the sheet. The sheet view controller is embed on top of the main view controller with a fixed height.
+
+### Demo
+![Bottom Sheet Animation](bottom_sheet_ios.gif)
