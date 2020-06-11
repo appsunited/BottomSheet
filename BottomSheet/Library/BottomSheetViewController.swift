@@ -29,13 +29,13 @@ class BottomSheetViewController: UIViewController, BottomSheetDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addChildViewController(mainViewController)
-        addChildViewController(bottomSheetViewController)
+        addChild(mainViewController)
+        addChild(bottomSheetViewController)
         
         bottomSheetViewController.bottomSheetDelegate = self
         
-        mainViewController.didMove(toParentViewController: self)
-        bottomSheetViewController.didMove(toParentViewController: self)
+        mainViewController.didMove(toParent: self)
+        bottomSheetViewController.didMove(toParent: self)
     }
     
     func bottomSheet(_ bottomSheet: BottomSheet, didScrollTo contentOffset: CGPoint) {

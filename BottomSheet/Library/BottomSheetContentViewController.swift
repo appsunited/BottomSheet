@@ -17,7 +17,7 @@ class BottomSheetContentViewController: UITableViewController, BottomSheet {
     var isSnapping: Bool!
     
     init(height: CGFloat = 200, cellId: String = "BottomSheetCell", background: UIView = BottomSheetBackgroundView(), isSnapping: Bool = true) {
-        super.init(style: UITableViewStyle.plain)
+        super.init(style: UITableView.Style.plain)
         self.height = height
         self.cellId = cellId
         self.background = background
@@ -35,7 +35,7 @@ class BottomSheetContentViewController: UITableViewController, BottomSheet {
         tableView.contentInset.top = (UIScreen.main.bounds.height - 20) - height
         tableView.backgroundColor = .clear
         tableView.showsVerticalScrollIndicator = false
-        tableView.decelerationRate = UIScrollViewDecelerationRateFast
+        tableView.decelerationRate = UIScrollView.DecelerationRate.fast
     }
 
     override func viewDidLayoutSubviews() {
